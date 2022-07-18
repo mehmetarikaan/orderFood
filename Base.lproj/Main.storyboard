@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Order_Food" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jKo-W0-2dY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="yemekHucre" id="a2r-IA-8IY" customClass="FoodTableViewCell" customModule="Order_Food" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a2r-IA-8IY" id="69Y-1R-4xf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ayran" translatesAutoresizingMaskIntoConstraints="NO" id="mGv-df-veD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="2cc-4Y-I1z"/>
+                                                        <constraint firstAttribute="height" constant="100" id="nIE-en-V7h"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCF-AM-OtQ">
+                                                    <rect key="frame" x="108" y="11" width="50" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24TL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbD-bq-qwp">
+                                                    <rect key="frame" x="113" y="59" width="40" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="tintColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEE-yx-tQ7">
+                                                    <rect key="frame" x="322" y="34" width="92" height="32"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Sipariş ver">
+                                                        <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="orderButton:" destination="a2r-IA-8IY" eventType="touchUpInside" id="arJ-4J-MyI"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SCF-AM-OtQ" firstAttribute="top" secondItem="69Y-1R-4xf" secondAttribute="topMargin" id="34X-vw-hRa"/>
+                                                <constraint firstItem="AEE-yx-tQ7" firstAttribute="top" secondItem="69Y-1R-4xf" secondAttribute="top" constant="34" id="CSH-ie-c9S"/>
+                                                <constraint firstAttribute="trailing" secondItem="AEE-yx-tQ7" secondAttribute="trailing" id="N1e-M7-z5u"/>
+                                                <constraint firstItem="mGv-df-veD" firstAttribute="leading" secondItem="69Y-1R-4xf" secondAttribute="leading" id="QcA-VQ-NIk"/>
+                                                <constraint firstItem="AEE-yx-tQ7" firstAttribute="centerY" secondItem="69Y-1R-4xf" secondAttribute="centerY" id="YhZ-v0-Ae2"/>
+                                                <constraint firstItem="mGv-df-veD" firstAttribute="top" secondItem="69Y-1R-4xf" secondAttribute="top" id="ZrK-ns-YqT"/>
+                                                <constraint firstAttribute="bottom" secondItem="mGv-df-veD" secondAttribute="bottom" id="b4M-No-xOA"/>
+                                                <constraint firstItem="NbD-bq-qwp" firstAttribute="top" secondItem="SCF-AM-OtQ" secondAttribute="bottom" constant="24" id="mOc-Dh-0MJ"/>
+                                                <constraint firstItem="NbD-bq-qwp" firstAttribute="leading" secondItem="mGv-df-veD" secondAttribute="trailing" constant="13" id="nEV-KB-vmu"/>
+                                                <constraint firstItem="SCF-AM-OtQ" firstAttribute="leading" secondItem="mGv-df-veD" secondAttribute="trailing" constant="8" symbolic="YES" id="sVj-JB-l7w"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodNameLabel" destination="SCF-AM-OtQ" id="4GQ-uL-dqv"/>
+                                            <outlet property="foodPhotoImageView" destination="mGv-df-veD" id="lpI-pu-yhu"/>
+                                            <outlet property="foodPriceLabel" destination="NbD-bq-qwp" id="9RS-WQ-GBq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jKo-W0-2dY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J7j-yS-1cD"/>
+                            <constraint firstItem="jKo-W0-2dY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UDY-99-jDa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jKo-W0-2dY" secondAttribute="trailing" id="ltf-hP-iOA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jKo-W0-2dY" secondAttribute="bottom" id="nGT-vK-HPo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ayran" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
