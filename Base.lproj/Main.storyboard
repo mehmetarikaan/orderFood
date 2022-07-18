@@ -88,6 +88,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jKo-W0-2dY" secondAttribute="bottom" id="nGT-vK-HPo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="foodsTableView" destination="jKo-W0-2dY" id="fsg-Lj-tQB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
